@@ -1,26 +1,30 @@
 {
   "files": {
+    "static/js/0.7bca6991.chunk.js": "/Anelliya-goit-react-hw-04-movies/static/js/0.7bca6991.chunk.js",
+    "static/js/0.7bca6991.chunk.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/0.7bca6991.chunk.js.map",
+    "home-page.js": "/Anelliya-goit-react-hw-04-movies/static/js/home-page.ddde3d08.chunk.js",
+    "home-page.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/home-page.ddde3d08.chunk.js.map",
     "main.css": "/Anelliya-goit-react-hw-04-movies/static/css/main.cc37b8d7.chunk.css",
-    "main.js": "/Anelliya-goit-react-hw-04-movies/static/js/main.01c1d4b7.chunk.js",
-    "main.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/main.01c1d4b7.chunk.js.map",
-    "movie-ditails.js": "/Anelliya-goit-react-hw-04-movies/static/js/movie-ditails.d94971aa.chunk.js",
-    "movie-ditails.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/movie-ditails.d94971aa.chunk.js.map",
-    "movie-page.js": "/Anelliya-goit-react-hw-04-movies/static/js/movie-page.c1c4f3a8.chunk.js",
-    "movie-page.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/movie-page.c1c4f3a8.chunk.js.map",
-    "runtime-main.js": "/Anelliya-goit-react-hw-04-movies/static/js/runtime-main.cd61efc7.js",
-    "runtime-main.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/runtime-main.cd61efc7.js.map",
-    "static/js/4.f7b304bb.chunk.js": "/Anelliya-goit-react-hw-04-movies/static/js/4.f7b304bb.chunk.js",
-    "static/js/4.f7b304bb.chunk.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/4.f7b304bb.chunk.js.map",
-    "static/js/5.8b1c25f5.chunk.js": "/Anelliya-goit-react-hw-04-movies/static/js/5.8b1c25f5.chunk.js",
-    "static/js/5.8b1c25f5.chunk.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/5.8b1c25f5.chunk.js.map",
+    "main.js": "/Anelliya-goit-react-hw-04-movies/static/js/main.aa9a5fc8.chunk.js",
+    "main.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/main.aa9a5fc8.chunk.js.map",
+    "movie-ditails.js": "/Anelliya-goit-react-hw-04-movies/static/js/movie-ditails.526ea5ac.chunk.js",
+    "movie-ditails.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/movie-ditails.526ea5ac.chunk.js.map",
+    "movie-page.js": "/Anelliya-goit-react-hw-04-movies/static/js/movie-page.a808b5aa.chunk.js",
+    "movie-page.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/movie-page.a808b5aa.chunk.js.map",
+    "runtime-main.js": "/Anelliya-goit-react-hw-04-movies/static/js/runtime-main.6884457e.js",
+    "runtime-main.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/runtime-main.6884457e.js.map",
+    "static/js/6.63020d45.chunk.js": "/Anelliya-goit-react-hw-04-movies/static/js/6.63020d45.chunk.js",
+    "static/js/6.63020d45.chunk.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/6.63020d45.chunk.js.map",
+    "static/js/7.7aa014ae.chunk.js": "/Anelliya-goit-react-hw-04-movies/static/js/7.7aa014ae.chunk.js",
+    "static/js/7.7aa014ae.chunk.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/7.7aa014ae.chunk.js.map",
     "index.html": "/Anelliya-goit-react-hw-04-movies/index.html",
     "static/css/main.cc37b8d7.chunk.css.map": "/Anelliya-goit-react-hw-04-movies/static/css/main.cc37b8d7.chunk.css.map",
-    "static/js/4.f7b304bb.chunk.js.LICENSE.txt": "/Anelliya-goit-react-hw-04-movies/static/js/4.f7b304bb.chunk.js.LICENSE.txt"
+    "static/js/6.63020d45.chunk.js.LICENSE.txt": "/Anelliya-goit-react-hw-04-movies/static/js/6.63020d45.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cd61efc7.js",
-    "static/js/4.f7b304bb.chunk.js",
+    "static/js/runtime-main.6884457e.js",
+    "static/js/6.63020d45.chunk.js",
     "static/css/main.cc37b8d7.chunk.css",
-    "static/js/main.01c1d4b7.chunk.js"
+    "static/js/main.aa9a5fc8.chunk.js"
   ]
 }

@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/NotFound.jsx"],"names":["NorFound","className"],"mappings":"2JAIeA,UAJE,WACb,OAAQ,mBAAGC,UAAU,cAAb","file":"static/js/7.7aa014ae.chunk.js","sourcesContent":["const NorFound = () => {\n    return (<p className=\"error-title\">404 Page not found</p>);\n}\n\nexport default NorFound;"],"sourceRoot":""}
