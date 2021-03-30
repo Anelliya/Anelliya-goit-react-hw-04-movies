@@ -1,0 +1,30 @@
+{
+  "files": {
+    "static/js/0.7bca6991.chunk.js": "/Anelliya-goit-react-hw-04-movies/static/js/0.7bca6991.chunk.js",
+    "static/js/0.7bca6991.chunk.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/0.7bca6991.chunk.js.map",
+    "home-page.js": "/Anelliya-goit-react-hw-04-movies/static/js/home-page.ddde3d08.chunk.js",
+    "home-page.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/home-page.ddde3d08.chunk.js.map",
+    "main.css": "/Anelliya-goit-react-hw-04-movies/static/css/main.cc37b8d7.chunk.css",
+    "main.js": "/Anelliya-goit-react-hw-04-movies/static/js/main.0ddfcb4f.chunk.js",
+    "main.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/main.0ddfcb4f.chunk.js.map",
+    "movie-ditails.js": "/Anelliya-goit-react-hw-04-movies/static/js/movie-ditails.25c43894.chunk.js",
+    "movie-ditails.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/movie-ditails.25c43894.chunk.js.map",
+    "movie-page.js": "/Anelliya-goit-react-hw-04-movies/static/js/movie-page.a808b5aa.chunk.js",
+    "movie-page.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/movie-page.a808b5aa.chunk.js.map",
+    "runtime-main.js": "/Anelliya-goit-react-hw-04-movies/static/js/runtime-main.c9cbfa16.js",
+    "runtime-main.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/runtime-main.c9cbfa16.js.map",
+    "static/js/6.cf5aeae8.chunk.js": "/Anelliya-goit-react-hw-04-movies/static/js/6.cf5aeae8.chunk.js",
+    "static/js/6.cf5aeae8.chunk.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/6.cf5aeae8.chunk.js.map",
+    "static/js/7.7aa014ae.chunk.js": "/Anelliya-goit-react-hw-04-movies/static/js/7.7aa014ae.chunk.js",
+    "static/js/7.7aa014ae.chunk.js.map": "/Anelliya-goit-react-hw-04-movies/static/js/7.7aa014ae.chunk.js.map",
+    "index.html": "/Anelliya-goit-react-hw-04-movies/index.html",
+    "static/css/main.cc37b8d7.chunk.css.map": "/Anelliya-goit-react-hw-04-movies/static/css/main.cc37b8d7.chunk.css.map",
+    "static/js/6.cf5aeae8.chunk.js.LICENSE.txt": "/Anelliya-goit-react-hw-04-movies/static/js/6.cf5aeae8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9cbfa16.js",
+    "static/js/6.cf5aeae8.chunk.js",
+    "static/css/main.cc37b8d7.chunk.css",
+    "static/js/main.0ddfcb4f.chunk.js"
+  ]
+}
