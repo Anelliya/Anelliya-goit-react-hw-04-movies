@@ -2,7 +2,7 @@
   "name": "goit-react-hw-04-movies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anelliya.github.io/goit-react-hw-04-movies/.",
+  "homepage": "https://anelliya.github.io/Anelliya-goit-react-hw-04-movies/",
   "editor.formatOnSave": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",

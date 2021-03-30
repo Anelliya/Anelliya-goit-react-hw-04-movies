@@ -72,11 +72,13 @@ class movieDitails extends Component {
                             <p><NavLink
                                 to={{
                                     pathname: `${this.props.match.url}/cast`,
+                                    state: `${this.props.location.state}`,
                                     from: `${this.props.location.from}`
                                 }}>Cast</NavLink></p>
                             <p><NavLink
                                 to={{
                                     pathname: `${this.props.match.url}/reviews`,
+                                    state: `${this.props.location.state}`,
                                     from: `${this.props.location.from}`
                                 }}>Reviews</NavLink></p>
                         </div>
