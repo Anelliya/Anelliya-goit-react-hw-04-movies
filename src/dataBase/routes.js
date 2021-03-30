@@ -34,8 +34,13 @@ const routes = [
         key: 3,
         path: '/movies/:movieId',
         component: MovieDitails,
-
+        exact: false
     },
+    {
+        key: 4,
+        component: HomePage,
+        exact: false
+    }
 
 ]
 
