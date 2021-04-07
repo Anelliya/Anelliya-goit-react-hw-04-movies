@@ -1,9 +1,9 @@
 import axios from 'axios';
-import * as inheritApi from '../index'
+import * as initialApi from '../index'
 
-axios.defaults.baseURL = inheritApi.base_url;
+axios.defaults.baseURL = initialApi.base_url;
 axios.defaults.params = {
-    api_key: inheritApi.api_key,
+    api_key: initialApi.api_key,
 }
 
 const fetchTrendsMovies = (page) => {
@@ -14,7 +14,7 @@ const fetchTrendsMovies = (page) => {
 
 const fetchMovieById = (id) => {
     return axios
-        .get(`https://api.themoviedb.org/3/movie/${id}?`)
+        .get(`https://puthemoviedb.org/3/movie/${id}?`)
         .then(res => res.data)
 }
 
