@@ -18,7 +18,7 @@ class Cast extends Component {
 
         services.fetchCast(movieId)
             .then(res => this.setState({ cast: res.data.cast }))
-            .catch((err) => console.log("err: ", err))
+            .catch((err) => this.setState({ error: true }))
             .finally(() => this.setState({ loaderStatus: false}))
     }
 
@@ -29,20 +29,20 @@ class Cast extends Component {
         <>
             {loaderStatus && <Loader type="Bars" color="lightcoral" height={50} width={50} className="Loader" />}
             {error &&  <h2>There isn't information about cast...</h2>}
-           { cast.length > 0  ?
-                <ul>
-                    {cast.map(({ name, profile_path, character, job, credit_id }) =>
-                        <li key={credit_id}>
-                            <img src={profile_path
-                                ? `https://image.tmdb.org/t/p/w500/${profile_path}`
-                                : defaultImg}
-                                alt={job} width="100px" />
-                            <h2>{name}</h2>
-                            <p>Character: {character ? `${character}` : 'unknown'}</p>
-                        </li>
-                    )}
-                </ul>
-                : <h2>There isn't information about cast...</h2>}
+                { cast.length > 0 &&
+                    <ul>
+                        {cast.map(({ name, profile_path, character, job, credit_id }) =>
+                            <li key={credit_id}>
+                                <img src={profile_path
+                                    ? `https://image.tmdb.org/t/p/w500/${profile_path}`
+                                    : defaultImg}
+                                    alt={job} width="100px" />
+                                <h2>{name}</h2>
+                                <p>Character: {character ? `${character}` : 'unknown'}</p>
+                            </li>
+                        )}
+                    </ul>
+                }
         </>
         );
     }
