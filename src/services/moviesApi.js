@@ -14,7 +14,7 @@ const fetchTrendsMovies = (page) => {
 
 const fetchMovieById = (id) => {
     return axios
-        .get(`https://puthemoviedb.org/3/movie/${id}?`)
+        .get(`movie/${id}?`)
         .then(res => res.data)
 }
 
