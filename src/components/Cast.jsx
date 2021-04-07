@@ -1,26 +1,35 @@
 import { Component } from 'react';
+import Loader from 'react-loader-spinner'
 
 import defaultImg from "../images/notFound.png";
-import fetchCast from "../services/movieCastApi";
+import services from "../services/moviesApi";
 
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 class Cast extends Component {
     state = {
         cast: [],
+        loaderStatus: true,
+        error: false
     }
 
     componentDidMount() {
         const movieId = this.props.movieId;
-        fetchCast(movieId)
+
+        services.fetchCast(movieId)
             .then(res => this.setState({ cast: res.data.cast }))
-            .catch(err => console.log("err from cast:", err))
+            .catch((err) => console.log("err: ", err))
+            .finally(() => this.setState({ loaderStatus: false}))
     }
 
     render() {
-        const { cast } = this.state;
-
+        const { cast, loaderStatus, error } = this.state;
+        
         return (
-            cast ?
+        <>
+            {loaderStatus && <Loader type="Bars" color="lightcoral" height={50} width={50} className="Loader" />}
+            {error &&  <h2>There isn't information about cast...</h2>}
+           { cast.length > 0  ?
                 <ul>
                     {cast.map(({ name, profile_path, character, job, credit_id }) =>
                         <li key={credit_id}>
@@ -33,8 +42,8 @@ class Cast extends Component {
                         </li>
                     )}
                 </ul>
-                : null
-
+                : <h2>There isn't information about cast...</h2>}
+        </>
         );
     }
 }

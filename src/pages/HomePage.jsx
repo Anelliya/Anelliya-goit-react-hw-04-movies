@@ -1,11 +1,13 @@
 import { Component } from 'react';
 import { NavLink } from "react-router-dom";
+import Loader from 'react-loader-spinner'
 
-import fetchTrendsMovies from "../services/moviesApi";
+import services from "../services/moviesApi";
+
 import Button from "../components/Button";
-import Loading from "../components/Loading";
 import defaultImage from '../images/notFound.png'
 
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 class HomePage extends Component {
 
@@ -13,10 +15,11 @@ class HomePage extends Component {
         path: '/',
         trendsMovies: null,
         page: 1,
+        loaderStatus: true,
     }
 
     componentDidMount() {
-        this.getTrendsMovies();
+       this.getTrendsMovies();
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -27,8 +30,9 @@ class HomePage extends Component {
 
     getTrendsMovies = () => {
         const { page } = this.state;
-        fetchTrendsMovies(page)
-            .then(movies => this.setState({ trendsMovies: movies }))
+        services.fetchTrendsMovies(page)
+            .then(movies => this.setState({ trendsMovies: movies, loaderStatus: false}))
+            .catch ( err => console.log("err: ", err))
     }
 
     handleNextPage = () => {
@@ -40,10 +44,12 @@ class HomePage extends Component {
     }
 
     render() {
-        const { trendsMovies, page } = this.state;
+        const { trendsMovies, page, loaderStatus } = this.state;
 
         return (
-            trendsMovies ?
+        <>
+           { loaderStatus && <Loader type="Bars" color="lightcoral" height={50} width={50} className="Loader"/>}
+           { trendsMovies &&
                 <>
                     <h1 className="Trends-film-title"> Trends Movies</h1>
                     <ul className="ImageGallery">
@@ -69,13 +75,12 @@ class HomePage extends Component {
                         <Button onClick={this.handleNextPage} title={"Next page"} className="Navigation-button" />
                         {page > 1 && <Button onClick={this.handlePrevPage} title={"Prev page"} className="Navigation-button" />}
                     </div>
-                </>
-                : <Loading />
+                    </>
+                }
+            
+            </>
         )
-    }
-
-
-
+     }
 }
 
 

@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { Component } from 'react';
 import queryString from "query-string";
+import Loader from 'react-loader-spinner'
 
-import fetchMovies from "../services/movieSearchApi";
+import services from "../services/moviesApi";
 import NotFound from "../components/NotFound";
-import defaultImage from '../images/notFound.png'
+import defaultImage from '../images/notFound.png';
+
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 class MoviesPage extends Component {
   state = {
@@ -12,25 +15,28 @@ class MoviesPage extends Component {
     movies: [],
     page: 1,
     error: false,
+    loaderStatus: false,
   }
 
   componentDidMount() {
     const { query, page, baseURL } = this.state;
 
     this.setState({ page: 1, error: false, });
-    query?.length > 1 && fetchMovies(query, page, baseURL)
-      .then(queryResult => queryResult.length > 1 ? this.setState({ movies: queryResult }) : this.setState({ error: true }))
+    query?.length > 1 && services.fetchMovies(query, page, baseURL)
+      .then((queryResult) => {
+        queryResult.length > 1 ? this.setState({ movies: queryResult }) : this.setState({ error: true })
+      })
       .catch(() => this.setState({ error: true }))
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.page !== this.state.page) {
       const { page, query, baseURL } = this.state;
-      fetchMovies(query, page, baseURL).then(queryResult => this.setState({ movies: queryResult }))
+      services.fetchMovies(query, page, baseURL).then(queryResult => this.setState({ movies: queryResult }))
     }
 
     if (prevState.query !== this.state.query) {
-      this.setState({ error: false, });
+      this.setState({ error: false,  });
     }
 
     if (prevState.movies !== this.state.movies) {
@@ -41,15 +47,16 @@ class MoviesPage extends Component {
   }
 
   setQuery = (event) => {
-    this.setState({ query: event.target.value });
+    this.setState({ query: event.target.value});
   }
 
   getMovies = (event) => {
     const { query, page, baseURL } = this.state;
     event.preventDefault()
+    this.setState({ loaderStatus: true})
 
-    fetchMovies(query, page, baseURL)
-      .then(queryResult => queryResult.length > 1 ? this.setState({ movies: queryResult }) : this.setState({ error: true }))
+    services.fetchMovies(query, page, baseURL)
+      .then(queryResult => queryResult.length > 1 ? this.setState({ movies: queryResult, loaderStatus: false }) : this.setState({ error: true }))
       .catch((err) => { console.log('err', err) }).finally(this.setState({ movies: [] }))
   }
 
@@ -62,8 +69,7 @@ class MoviesPage extends Component {
   }
 
   render() {
-    const { movies, page, error, query } = this.state;
-    // console.log('query', query)
+    const { movies, page, error, query, loaderStatus } = this.state;
 
     return (
       < >
@@ -78,6 +84,8 @@ class MoviesPage extends Component {
             className="SearchForm-button">Search</button>
         </form>
 
+        { loaderStatus && <Loader type="Bars" color="lightcoral" height={50} width={50} className="Loader"/>}
+        
         {movies.length > 1 &&
           <ul className="ImageGallery">
             {movies.map(({ title, id, poster_path }) =>
